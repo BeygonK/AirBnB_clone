@@ -1,10 +1,7 @@
-"""This is a function"""
-
-
 def my_func():
-    """This is a definition"""
+    """Function"""
 
-    print("Hello")
+    print("Hello world")
     return
 
 
