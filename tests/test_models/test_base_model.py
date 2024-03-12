@@ -12,12 +12,14 @@ class TestBaseModel(unittest.TestCase):
         self.base_model = BaseModel()
 
     def test_save(self):
+        """Tests save method"""
         initial_updated_at = self.base_model.updated_at
         self.base_model.save()
         self.assertNotEqual(initial_updated_at, self.base_model.updated_at)
         self.assertIsInstance(self.base_model.updated_at, datetime)
 
     def test_to_dict(self):
+        """Test dict method"""
         obj_dict = self.base_model.to_dict()
         self.assertIsInstance(obj_dict, dict)
         self.assertEqual(obj_dict['__class__'], 'BaseModel')
