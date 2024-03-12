@@ -4,6 +4,7 @@
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
 
 class HBNBCommand(cmd.Cmd):
     """This is a class"""
@@ -29,10 +30,13 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         class_name = args[0]
-        if class_name not in {"BaseModel"}:
+        if class_name not in {"BaseModel", "User"}:
             print("** class doesn't exist **")
             return
-        new_instance = BaseModel()
+        if class_name == "BaseModel":
+            new_instance = BaseModel()
+        else:
+            new_instance = User()
         new_instance.save()
         print(new_instance.id)
 
@@ -43,7 +47,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         class_name = args[0]
-        if class_name not in {"BaseModel"}:
+        if class_name not in {"BaseModel", "User"}:
             print("** class doesn't exist **")
             return
         if len(args) < 2:
@@ -63,7 +67,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         class_name = args[0]
-        if class_name not in {"BaseModel"}:
+        if class_name not in {"BaseModel", "User"}:
             print("** class doesn't exist **")
             return
         if len(args) < 2:
@@ -84,7 +88,7 @@ class HBNBCommand(cmd.Cmd):
             print([str(obj) for obj in storage.all().values()])
         else:
             class_name = args[0]
-            if class_name not in {"BaseModel"}:
+            if class_name not in {"BaseModel", "User"}:
                 print("** class doesn't exist **")
                 return
             print([str(obj) for key, obj in storage.all().items()
@@ -97,7 +101,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
         class_name = args[0]
-        if class_name not in {"BaseModel"}:
+        if class_name not in {"BaseModel", "User"}:
             print("** class doesn't exist **")
             return
         if len(args) < 2:
