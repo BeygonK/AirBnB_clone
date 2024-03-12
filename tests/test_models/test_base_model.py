@@ -5,6 +5,7 @@ import unittest
 from models.base_model import BaseModel
 from datetime import datetime
 
+
 class TestBaseModel(unittest.TestCase):
     """This is a definition of a class"""
     def setUp(self):
@@ -42,6 +43,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(new_model.updated_at, datetime(2023, 1, 1))
         self.assertEqual(new_model.name, 'test_name')
         self.assertEqual(new_model.my_number, 123)
+
 
 if __name__ == '__main__':
     unittest.main()
