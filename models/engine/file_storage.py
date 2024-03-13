@@ -1,7 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/python3
 """This is a class module"""
 
 import json
+from models.base_model import BaseModel
+from models.user import User
 
 class FileStorage:
     """This is class definition"""
@@ -27,8 +29,6 @@ class FileStorage:
 
     def reload(self):
         """Loads from json"""
-        from models.base_model import BaseModel
-        from models.user import User  # Import the User class here
         try:
             with open(self.__file_path, 'r') as f:
                 data = json.load(f)

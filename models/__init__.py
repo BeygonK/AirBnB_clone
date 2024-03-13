@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/python3
 """This is a iniit module"""
 
 from models.engine.file_storage import FileStorage

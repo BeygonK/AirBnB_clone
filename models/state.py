@@ -1,10 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/python3
 """This is module for State"""
 
-from models.base_mode import BaseModel
+from models.base_model import BaseModel
 
 class State(BaseModel):
     """State class inherits from BaseModel"""
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.name = kwargs.get('name', "")
+        name = ""
