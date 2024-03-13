@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/python3
 """This is a command line"""
+
 
 import cmd
 from models.base_model import BaseModel
