@@ -6,7 +6,7 @@
 	border-radius: 4px;
 	display: flex;
 	align-items: center;
-	justify-content: right;
+	justify-content: space-between;
 }
 
 button {
@@ -29,19 +29,24 @@ button::hover {
 .locations, .amenities {
 	height: 100%;
 	width: 25%;
-
-}
-.filters div {
-	height: 100%;
-	width: 25%;
-	border-right: 1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD;
+	box-sizing: border-box;
 }
 
-.filters div h3 {
+.amenities {
+	border-right: none;
+}
+
+.locations h3, .amenities h3 {
 	font-weight: 600;
+	color:#333333;
+	text-align:center;
 }
 
-.filters div h4 {
-	font-weight: 400;
-	font-size: 14px;
+.locations h4, .amenities h4 {
+	font-weight:400;
+	font-size:14px;
+	color:#555555;
+	text-align:center;
+	margin-top: -12px;
 }
