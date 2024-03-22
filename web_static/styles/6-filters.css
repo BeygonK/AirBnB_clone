@@ -20,10 +20,9 @@ button {
 	margin-right: 30px;
 	cursor: pointer;
 	transition: opacity 0.3s ease;
-	align-items: right;
 }
 
-button:hover {
+button::hover {
 	opacity: 90%;
 }
 
@@ -32,7 +31,6 @@ button:hover {
 	width: 25%;
 	border-right:1px solid #DDDDDD;
 	box-sizing: border-box;
-	position:relative;
 }
 
 .amenities {
@@ -53,46 +51,27 @@ button:hover {
 	margin-top: -12px;
 }
 
-.popover ul li{
-	color: #333;
-	list-style:none;
+.places {
+	width:100%;
+	margin-top: 20px;
+	display: flex;
+	flex-direction:column;
 }
 
-h2 {
-	color:#333;
-	margin-bottom: -3px;
+.articles {
+	display:flex;
+	align-items:center;
 }
-
-.locations .popover {
-	position:absolute;
-	background-color: #FAFAFAFA;
-	border: 1px solid #DDDDDD;
-	width: 100%;
-	list-style: none;
-	text-align:center;
-	margin-top:-14px;
-	padding:0;
-	display:none;
+.places article {
+	 width: calc(33.33% - 40px);
+	 padding: 20px;
+	 margin: 20px;
+	 border: 1px solid #FF5A5F;
+	 border-radius: 4px;
+	 box-sizing: border-box;
+	 text-align:center;
 }
-
-.amenities .popover {
-	position:absolute;
-        background-color: #FAFAFAFA;
-        border: 1px solid #DDDDDD;
-        width: 100%;
-        list-style: none;
-        text-align:center;
-        margin-top:-14px;
-        padding:0;
-        display:none;
-	color: #333;
-
+.places h1 {
+	text-align: left;
+	font-size:30px;
 }
-
-.amenities ul > li{
-	padding-top: 30px;
-}
-.locations:hover > .popover, .amenities:hover > .popover{
-	display:block;
-}
-
